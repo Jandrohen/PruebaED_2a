@@ -79,6 +79,11 @@ public class CursoTest {
 		boolean prueba1 = this.cu.estaRegistrado(p1.getDni());
 		assertTrue(prueba1);
 		
+		//clase invalida
+		boolean prueba2 = this.cu.estaRegistrado(p2.getDni());
+		assertFalse(prueba2);
+		
+		
 	}
 	/*
 	 * Documentar y crear test unitario
@@ -95,6 +100,11 @@ public class CursoTest {
 	 * */
 	@Test
 	public void numeroAlumnos() {
+		//clase valida	
+		int sizeAntes = this.cu.numeroAlumnos();
+		this.cu.aniadirAlumno(p1);
+		int sizeDespues = this.cu.numeroAlumnos();
+		assertEquals(sizeAntes+1, sizeDespues);
 
 	}
 	
