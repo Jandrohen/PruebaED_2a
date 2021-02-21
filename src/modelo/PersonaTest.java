@@ -66,12 +66,13 @@ class PersonaTest {
 
 	@Test
 	void testGetApellido1() {
-		fail("Not yet implemented");
+		assertEquals("Iglesias", persona.getApellido1());
 	}
 
 	@Test
 	void testSetApellido1() {
-		fail("Not yet implemented");
+		persona.setApellido1("Nuñez");
+		assertEquals("Nuñez", persona.getNombre());
 	}
 
 }
