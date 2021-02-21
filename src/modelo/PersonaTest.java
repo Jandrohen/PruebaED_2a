@@ -24,12 +24,38 @@ class PersonaTest {
 
 	@Test
 	void testSetDni() {
-		fail("Not yet implemented");
+		//clase valida --> modifica
+				try {
+					persona.setDni("17456789L");
+				} catch (Exception e) {
+					
+				}
+				assertEquals("17456789L", persona.getDni());
+				
+				String dniAntesDeSet = persona.getDni();
+				
+				//clase invalida --> no modifica
+				try {
+					persona.setDni("17456789Z");
+				} catch (Exception e) {
+					
+				}
+				assertEquals(dniAntesDeSet, persona.getDni());
+				
+				//clase invalida --> Lanza Exception
+				Boolean excepcionLanzada=false;
+				
+				try {
+					persona.setDni("174567897");
+				} catch (Exception e) {
+					excepcionLanzada = true;
+				} 
+				assertTrue(excepcionLanzada);
 	}
 
 	@Test
 	void testGetNombre() {
-		fail("Not yet implemented");
+		assertEquals("Pablo", persona.getNombre());
 	}
 
 	@Test

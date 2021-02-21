@@ -19,7 +19,7 @@ public class CursoTest {
 	 * Documentar y crear test unitario
 	 * */
 	@Test
-	public void testeliminarAlumno()  {
+	public void testEliminarAlumno()  {
 	
 				//clase valida
 				this.cu.aniadirAlumno(p1);
@@ -59,7 +59,7 @@ public class CursoTest {
 	 * Documentar y crear test unitario
 	 * */
 	@Test
-	public void testaniadirAlumno() {
+	public void testAniadirAlumno() {
 		//clase valida	
 		int sizeAntes = this.cu.numeroAlumnos();
 		this.cu.aniadirAlumno(p1);
@@ -72,7 +72,7 @@ public class CursoTest {
 	 * Documentar y crear test unitario
 	 * */
 	@Test
-	public void testestaRegistrado() {
+	public void testEstaRegistrado() {
 		//clase valida		
 		this.cu.aniadirAlumno(p1);
 		boolean prueba1 = this.cu.estaRegistrado(p1.getDni());
@@ -99,7 +99,7 @@ public class CursoTest {
 	 * Documentar y crear test unitario
 	 * */
 	@Test
-	public void numeroAlumnos() {
+	public void testNumeroAlumnos() {
 		//clase valida	
 		int sizeAntes = this.cu.numeroAlumnos();
 		this.cu.aniadirAlumno(p1);
