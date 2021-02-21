@@ -1,5 +1,7 @@
 package modelo;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,6 +73,10 @@ public class CursoTest {
 	 * */
 	@Test
 	public void testestaRegistrado() {
+		//clase valida		
+		this.cu.aniadirAlumno(p1);
+		boolean prueba1 = this.cu.estaRegistrado(p1.getDni());
+		assertTrue(prueba1);
 		
 	}
 	/*
