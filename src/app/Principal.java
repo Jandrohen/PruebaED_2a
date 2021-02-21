@@ -1,16 +1,13 @@
-package ed.examen.app;
+package app;
 
 import java.util.Scanner;
-
-import ed.examen.modelo.Curso;
-import ed.examen.modelo.Persona;
-
+ 
 public class Principal {
 
-	static Curso c;
+	 static modelo.Curso c;
 	
 	public static void main(String[] args) {
-		c = new Curso();
+		c = new modelo.Curso();
 		Integer opcion = mostrarMenuYRecogerOpcion();
 		while(opcion!=0) {
 			procesarOpcion(opcion);
@@ -40,7 +37,7 @@ public class Principal {
 			System.out.print("Interoducir apellido1: ");
 			String inApellido1= s.nextLine();
 			
-			c.aniadirAlumno(new Persona(inDNI, inNombre, inApellido1));
+			c.aniadirAlumno(new modelo.Persona(inDNI, inNombre, inApellido1));
 			
 		}else if (opcion==2) {//eliminar
 			System.out.println("Introducir dni de usuario a eliminar: ");

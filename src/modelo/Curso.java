@@ -1,4 +1,4 @@
-package ed.examen.modelo;
+package modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class Curso {
 	
 	private List<Persona> listaAlumnos;
-
+	
 	/*
 	 * Documentar y crear test unitario
 	 * */
@@ -21,7 +21,7 @@ public class Curso {
 	/*
 	 * Documentar y crear test unitario
 	 * */
-	public void aniadirAlumno(Persona p) {
+	public  void aniadirAlumno(Persona p) {
 		listaAlumnos.add(p);
 	}
 	
