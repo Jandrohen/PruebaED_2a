@@ -1,5 +1,6 @@
 package modelo;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
@@ -84,7 +85,9 @@ public class CursoTest {
 	 * */
 	@Test
 	public void testCurso() {
-	
+		Curso cu2 =new Curso();
+		assertNotNull(cu2);
+		
 	}
 	
 	/*
