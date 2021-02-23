@@ -1,4 +1,9 @@
 package modelo;
+
+/**
+ * @author dam02
+ *@version 1.0
+ */
 public class Persona{
 	
 	private String dni;
@@ -7,59 +12,66 @@ public class Persona{
 	
 	public Persona() {}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Crea un constructor de persona<br>
+	 * @param dni String de 9 digitos en el que insertas el dni
+	 * @param nombre El nombre de la persona
+	 * @param apellido1 El apellido de la persona
+	 */
 	public Persona(String dni, String nombre, String apellido1) {
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * 
+	 * @return Devuelve un String con el DNI de una Persona
+	 */
 	public String getDni() {
 		return dni;
 	}
 	
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Recoge un String para asignarle un DNI al objeto Persona
+	 * @param dni String de numeros y una letra al Final
+	 * @throws Exception Retorna un mensaje indicando que el ultimo caracter no es una letra
+	 */
 	public void setDni(String dni) throws Exception {
 		//comprobacion de si el ultimo caracter es una letra
-		if(Character.isLetter(dni.charAt(dni.length()))) {
+		if(Character.isLetter(dni.charAt(dni.length()-1))) {
 			this.dni=dni;
 		}else {
 			throw new Exception("El ultimo caracter introducido no es una letra");
 		}
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * @return Devuelve un String con el Nombre de una Persona
+	 */	
 	public String getNombre() {
 		return nombre;
 	}
-	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+
+	/**
+	 * Recoge un String para asignarle un Nombre al objeto Persona	  
+	 * @param nombre String de nombre de una persona
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * @return Devuelve un String con el Apellido de una Persona
+	 */	
 	public String getApellido1() {
 		return apellido1;
 	}
 	
-	/*
-	 * Documentar y crear test unitario
-	 * */
+	/**
+	 * Recoge un String para asignarle un Apellido al objeto Persona	  
+	 * @param apellido1 String apellido de una persona
+	 */
 	public void setApellido1(String apellido1) {
 		this.apellido1 = apellido1;
 	}
